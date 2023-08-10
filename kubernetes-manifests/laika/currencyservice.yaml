@@ -51,7 +51,7 @@ spec:
               - all
           privileged: false
           # readOnlyRootFilesystem: true
-        image: currencyservice
+        image: dcr1.azurecr.io/currencyservice:latest
         ports:
         - name: grpc
           containerPort: 7000

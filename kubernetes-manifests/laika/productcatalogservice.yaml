@@ -49,7 +49,7 @@ spec:
           #     - all
           # privileged: false
           # readOnlyRootFilesystem: true
-        image: productcatalogservice
+        image: dcr1.azurecr.io/productcatalogservice:latest
         ports:
         - containerPort: 3550
         env:

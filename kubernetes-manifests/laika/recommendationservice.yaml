@@ -52,7 +52,7 @@ spec:
         #       - all
         #   privileged: false
         #   readOnlyRootFilesystem: true
-        image: recommendationservice
+        image: dcr1.azurecr.io/recommendationservice:latest
         ports:
         - containerPort: 8080
         # readinessProbe:

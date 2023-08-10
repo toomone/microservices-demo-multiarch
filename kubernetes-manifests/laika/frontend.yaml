@@ -50,7 +50,7 @@ spec:
                 - all
             privileged: false
             # readOnlyRootFilesystem: true
-          image: frontend
+          image: dcr1.azurecr.io/frontend:latest
           ports:
           - containerPort: 8080
           readinessProbe:
