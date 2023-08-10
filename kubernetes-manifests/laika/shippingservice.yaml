@@ -91,5 +91,5 @@ spec:
     app: shippingservice
   ports:
   - name: grpc
-    port: 50051
+    port: 50052
     targetPort: 50051
