@@ -30,7 +30,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          directory: "./src/adservice"
-          dockerfile: "Dockerfile"
+          context: "./src/adservice"
+          file: "Dockerfile"
           push: true
           tags: swagstore/adservice:latest
