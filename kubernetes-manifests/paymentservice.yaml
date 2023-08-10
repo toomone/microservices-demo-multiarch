@@ -17,7 +17,7 @@ kind: Deployment
 metadata:
   name: paymentservice
   labels:
-      tags.datadoghq.com/env: "dash2023"
+      tags.datadoghq.com/env: "gameday"
       tags.datadoghq.com/service: "paymentservice"
       tags.datadoghq.com/version: "0.5.0"
 spec:
@@ -28,7 +28,7 @@ spec:
     metadata:
       labels:
         app: paymentservice
-        tags.datadoghq.com/env: "dash2023"
+        tags.datadoghq.com/env: "gameday"
         tags.datadoghq.com/service: "paymentservice"
         tags.datadoghq.com/version: "0.5.0"
         admission.datadoghq.com/enabled: "true"
@@ -60,7 +60,7 @@ spec:
         - name: SPRING_DATASOURCE_USERNAME
           value: swagstore
         - name: SPRING_DATASOURCE_PASSWORD 
-          value: weLoveSwagAtDash2023
+          value: weLoveSwagAtgameday
         - name: SPRING_JPA_HIBERNATE_DDL_AUTO
           value: create
         - name: SERVER_PORT

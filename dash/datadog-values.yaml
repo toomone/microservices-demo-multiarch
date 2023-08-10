@@ -35,7 +35,7 @@ datadog:
   # logLevel: info
   ## Set global tags
   tags:
-    - env: dash2023
+    - env: gameday
 
   ## Enable Log collections
   logs:
@@ -84,7 +84,7 @@ datadog:
           fieldPath: status.hostIP
   # Enable data to be sent with invalid certs (required for kind cluster)
     tlsVerify: false
-  clusterName: dash2023
+  clusterName: gameday
 
   ## Set up global environment for agent and pods communication
   env:

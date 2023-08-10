@@ -4,7 +4,7 @@ metadata:
   name: paymentdbservice  
   labels:
     name: mysql
-    tags.datadoghq.com/env: "dash2023"
+    tags.datadoghq.com/env: "gameday"
     tags.datadoghq.com/service: "paymentdbservice"
     tags.datadoghq.com/version: "0.5.0"
 spec: # specification for deployment resource
@@ -18,7 +18,7 @@ spec: # specification for deployment resource
       labels:
         app: paymentdbservice # service will look for this label
         name: paymentdbservice
-        tags.datadoghq.com/env: "dash2023"
+        tags.datadoghq.com/env: "gameday"
         tags.datadoghq.com/service: "paymentdbservice"
         tags.datadoghq.com/version: "0.5.0"
       annotations:
@@ -119,7 +119,7 @@ data:
       DELIMITER ;
       GRANT EXECUTE ON PROCEDURE datadog.enable_events_statements_consumers TO datadog@'%';
       CREATE SCHEMA IF NOT EXISTS paymentdb;
-      CREATE USER swagstore@'%' IDENTIFIED BY 'weLoveSwagAtDash2023';
+      CREATE USER swagstore@'%' IDENTIFIED BY 'weLoveSwagAtgameday';
       GRANT ALL PRIVILEGES on paymentdb.* to swagstore@'%';
       DELIMITER $$
       CREATE PROCEDURE paymentdb.explain_statement(IN query TEXT)
