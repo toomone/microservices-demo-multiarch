@@ -1,4 +1,4 @@
-name: Adservice Docker Image CI
+name: Cartservice Docker Image CI
 
 on:
   workflow_dispatch:
