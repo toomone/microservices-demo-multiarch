@@ -51,7 +51,7 @@ spec:
               - all
           privileged: false
           # readOnlyRootFilesystem: true
-        image: dcr1.azurecr.io/paymentservice:latest
+        image: gdcr1.azurecr.io/paymentservice:latest
         ports:
         - containerPort: 50051
         env:

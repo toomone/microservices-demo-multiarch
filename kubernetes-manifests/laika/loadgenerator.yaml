@@ -71,7 +71,7 @@ spec:
               - all
           privileged: false
           readOnlyRootFilesystem: true
-        image: dcr1.azurecr.io/loadgenerator:latest
+        image: gdcr1.azurecr.io/loadgenerator:latest
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
