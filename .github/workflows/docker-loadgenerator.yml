@@ -3,8 +3,12 @@ name: Load generator build and publish to ACR
 on:
   workflow_dispatch:
   push:
+    paths:
+      - src/loadgenerator/**            
     branches: [ "main" ]
   pull_request:
+    paths:
+      - src/loadgenerator/**            
     branches: [ "main" ]
 
 jobs:
