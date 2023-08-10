@@ -1,4 +1,4 @@
-name: Recommandation service build and publish to ACR
+name: Recommendation service build and publish to ACR
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: "./src/recommandationservice"
-          file: "./src/recommandationservice/Dockerfile"
+          context: "./src/recommendationservice"
+          file: "./src/recommendationservice/Dockerfile"
           push: true
-          tags: ${{ secrets.ACR_ENDPOINT }}/recommandationservice:latest
+          tags: ${{ secrets.ACR_ENDPOINT }}/recommendationservice:latest
