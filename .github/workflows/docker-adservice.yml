@@ -33,4 +33,4 @@ jobs:
           context: "./src/adservice"
           file: "./src/adservice/Dockerfile"
           push: true
-          tags: swagstore/adservice:latest
+          tags: ${{ secrets.ACR_ENDPOINT }}/adservice:latest
