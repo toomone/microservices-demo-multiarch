@@ -1,4 +1,4 @@
-name: Cart service build and publish to ACR
+name: Email service build and publish to ACR
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: "./src/cartservice/src"
-          file: "./src/cartservice/src/Dockerfile"
+          context: "./src/emailservice"
+          file: "./src/emailservice/Dockerfile"
           push: true
-          tags: ${{ secrets.ACR_ENDPOINT }}/cartservice:latest
+          tags: ${{ secrets.ACR_ENDPOINT }}/emailservice:latest

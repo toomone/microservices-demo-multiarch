@@ -1,4 +1,4 @@
-name: Adservice Docker Image CI
+name: Adservice build and publish to ACR
 
 on:
   workflow_dispatch:
