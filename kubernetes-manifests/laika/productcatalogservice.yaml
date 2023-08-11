@@ -67,6 +67,11 @@ spec:
           value: "true"
         - name: DD_TRACE_SAMPLE_RATE
           value: "1"
+        - name: DD_TRACE_AGENT_URL
+          value: 'unix:///var/run/datadog/apm.socket'
+        volumeMounts:
+        - name: apmsocketpath
+          mountPath: /var/run/datadog                  
         # readinessProbe:
         #   exec:
         #     command: ["/bin/grpc_health_probe", "-addr=:3550"]
@@ -80,6 +85,10 @@ spec:
           limits:
             cpu: 200m
             memory: 128Mi
+      volumes:
+        - hostPath:
+            path: /var/run/datadog/
+          name: apmsocketpath     
 ---
 apiVersion: v1
 kind: Service
