@@ -84,6 +84,11 @@ spec:
             value: "true"
           - name: DD_TRACE_SAMPLE_RATE
             value: "1"
+          - name: DD_TRACE_AGENT_URL
+            value: 'unix:///var/run/datadog/apm.socket'
+          volumeMounts:
+          - name: apmsocketpath
+            mountPath: /var/run/datadog            
           resources:
             requests:
               cpu: 100m
