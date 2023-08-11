@@ -18,6 +18,9 @@ agents:
     # agents.image.tag -- Define the Agent version to use
     tag: 7.46.0
 
+  remoteConfiguration:
+    enabled: true 
+
 clusterAgent:
   ## Define the Datadog image to work with
   image:
@@ -45,6 +48,9 @@ clusterAgent:
   ## Enable replications required for Admission Controller and Metrics Provider
   replicas: 2
   createPodDisruptionBudget: true
+
+  remoteConfiguration:
+    enabled: true      
 
 datadog:
   ## Set APIkey and APPKey Optionally the site
