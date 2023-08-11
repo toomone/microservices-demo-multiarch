@@ -37,7 +37,7 @@ func CreateQuoteFromCount(count int) Quote {
 	min := 1
 	max := 15
 	rand.Seed(time.Now().UnixNano())
-	return CreateQuoteFromFloat(rand.Intn(max - min) + min)
+	return CreateQuoteFromFloat(rand.Float64(max - min) + min)
 }
 
 // CreateQuoteFromFloat takes a price represented as a float and creates a Price struct.
