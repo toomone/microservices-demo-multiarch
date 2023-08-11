@@ -79,6 +79,8 @@ spec:
           value: "true"
         - name: DD_RUNTIME_METRICS_ENABLED
           value: "true"
+        - name: DD_DYNAMIC_INSTRUMENTATION_ENABLED
+          value: "true"        
         # readinessProbe:
         #   exec:
         #     command: ["/bin/grpc_health_probe", "-addr=:50051"]
@@ -87,10 +89,10 @@ spec:
         #     command: ["/bin/grpc_health_probe", "-addr=:50051"]
         resources:
           requests:
-            cpu: 100m
-            memory: 64Mi
-          limits:
             cpu: 400m
+            memory: 256Mi
+          limits:
+            cpu: 600m
             memory: 512Mi
 ---
 apiVersion: v1
