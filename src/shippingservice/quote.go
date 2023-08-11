@@ -17,6 +17,8 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/rand"
+	"time"
 )
 
 // Quote represents a currency value.
