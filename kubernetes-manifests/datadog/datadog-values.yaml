@@ -87,7 +87,7 @@ datadog:
           fieldPath: status.hostIP
   # Enable data to be sent with invalid certs (required for kind cluster)
     tlsVerify: false
-  clusterName: gameday
+  clusterName: gd-cluster1
 
   ## Set up global environment for agent and pods communication
   env:
@@ -97,10 +97,10 @@ datadog:
           fieldPath: spec.nodeName
 
   ## Ignore Auto discovery for minikube
-  ignoreAutoConfig:
-    - etcd
-    - kube_controller_manager
-    - kube_scheduler
+  # ignoreAutoConfig:
+  #   - etcd
+  #   - kube_controller_manager
+  #   - kube_scheduler
 
   ## OTLP ingest related configuration
   otlp:
@@ -124,3 +124,6 @@ datadog:
           # datadog.otlp.receiver.protocols.http.useHostPort -- Enable the Host Port for the OTLP/HTTP endpoint
           useHostPort: true
 
+providers:
+  aks:
+    enabled: true
