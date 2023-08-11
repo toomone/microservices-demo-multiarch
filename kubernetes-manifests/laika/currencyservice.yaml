@@ -33,7 +33,7 @@ spec:
         tags.datadoghq.com/version: "0.5.0"
         admission.datadoghq.com/enabled: "true"
       annotations:
-        admission.datadoghq.com/js-lib.version: "v3.9.1"
+        admission.datadoghq.com/js-lib.version: "v4.11.1"
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
