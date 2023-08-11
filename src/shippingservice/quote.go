@@ -17,8 +17,6 @@ package main
 import (
 	"fmt"
 	"math"
-	"math/rand"
-	"time"
 )
 
 // Quote represents a currency value.
@@ -34,10 +32,7 @@ func (q Quote) String() string {
 
 // CreateQuoteFromCount takes a number of items and returns a Price struct.
 func CreateQuoteFromCount(count int) Quote {
-	min := 1
-	max := 15
-	rand.Seed(time.Now().UnixNano())
-	return CreateQuoteFromFloat(rand.Float64(max - min) + min)
+	return CreateQuoteFromFloat(8.99)
 }
 
 // CreateQuoteFromFloat takes a price represented as a float and creates a Price struct.
