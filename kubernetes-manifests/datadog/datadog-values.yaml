@@ -49,6 +49,9 @@ datadog:
   networkMonitoring:
     enabled: true
 
+  serviceMonitoring:
+      enabled: true    
+
   ## Enable process collection
   # If can't detect cluster name:
   # clusterName: <YOUR_CLUSTER_NAME>
