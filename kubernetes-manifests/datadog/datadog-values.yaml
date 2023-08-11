@@ -97,8 +97,8 @@ datadog:
     - name: DD_HOSTNAME
       valueFrom:
         fieldRef:
-          fieldPath: spec.nodeName
-
+          fieldPath: status.hostIP
+          
   ## Ignore Auto discovery for minikube
   # ignoreAutoConfig:
   #   - etcd
