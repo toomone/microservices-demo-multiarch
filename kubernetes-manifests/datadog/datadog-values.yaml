@@ -72,6 +72,9 @@ datadog:
   remoteConfiguration:
     enabled: true
 
+  remoteInstrumentation:
+    enabled: true 
+
   ## Enable Cloud Security Posture Management and Cloud Workload Security
   securityAgent:
     runtime:
