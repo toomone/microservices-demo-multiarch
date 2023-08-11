@@ -7,6 +7,17 @@ nameOverride: datadog-agent
 fullnameOverride: datadog-agent
 targetSystem: "linux"
 
+agents:
+  ## Define the Datadog image to work with
+  image:
+    # agents.image.name -- Datadog Agent image name to use (relative to `registry`)
+
+    ## use "dogstatsd" for Standalone Datadog Agent DogStatsD 7
+    name: agent
+
+    # agents.image.tag -- Define the Agent version to use
+    tag: 7.46.0
+
 clusterAgent:
   ## The Datadog Cluster Agent provides a streamlined, centralized approach to collecting cluster level monitoring data. 
   ## Datadog strongly recommends using the Cluster Agent for monitoring Kubernetes.
@@ -98,7 +109,7 @@ datadog:
       valueFrom:
         fieldRef:
           fieldPath: status.hostIP
-          
+
   ## Ignore Auto discovery for minikube
   # ignoreAutoConfig:
   #   - etcd
