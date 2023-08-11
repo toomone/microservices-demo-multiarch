@@ -31,18 +31,13 @@ spec:
         tags.datadoghq.com/env: "gameday"
         tags.datadoghq.com/service: "checkoutservice"
         tags.datadoghq.com/version: "0.5.0"
-        admission.datadoghq.com/enabled: "true"
     spec:
       serviceAccountName: default
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
         runAsNonRoot: true
-        runAsUser: 1000
-      volumes:
-        - hostPath:
-            path: /var/run/datadog/
-          name: apmsocketpath        
+        runAsUser: 1000   
       containers:
         - name: server
           securityContext:
@@ -100,6 +95,10 @@ spec:
             limits:
               cpu: 200m
               memory: 128Mi
+      volumes:
+        - hostPath:
+            path: /var/run/datadog/
+          name: apmsocketpath     
 ---
 apiVersion: v1
 kind: Service
