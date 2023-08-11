@@ -89,8 +89,8 @@ spec:
         #     command: ["/bin/grpc_health_probe", "-addr=:50051"]
         resources:
           requests:
-            cpu: 400m
-            memory: 256Mi
+            cpu: 200m
+            memory: 64Mi
           limits:
             cpu: 600m
             memory: 512Mi
